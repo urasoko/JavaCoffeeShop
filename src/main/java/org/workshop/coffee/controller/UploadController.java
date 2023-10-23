@@ -32,10 +32,6 @@ public class UploadController {
     @PostMapping("/uploadimage")
     public String uploadImage(Model model, @RequestParam("image") MultipartFile file, Principal principal) throws IOException {
 
-//        model.addAttribute("msg", "Uploaded images: " + name);
-//        getPerson(model, principal).setProfilePic(name);
-//        personService.savePerson(getPerson(model, principal));
-
         return "person/upload";
     }
 
