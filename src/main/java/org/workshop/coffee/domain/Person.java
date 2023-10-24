@@ -145,7 +145,7 @@ public class Person {
         this.roles = roles;
     }
 
-    public String getProfilePic() {
+    public String getProfilePicture() {
         return profilePic;
     }
 
