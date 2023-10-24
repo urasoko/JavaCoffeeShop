@@ -149,7 +149,7 @@ public class Person {
         return profilePic;
     }
 
-    public void setProfilePic(String profilePic) {
+    public void setProfilePicture(String profilePic) {
         this.profilePic = profilePic;
     }
 
