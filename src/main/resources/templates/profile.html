@@ -90,7 +90,7 @@
                 </div>
 
 
-              <div class="col-lg-12 form-group" th:classappend="${#fields.hasErrors('profilePic')} ? 'has-error'">
+              <div class="col-lg-12 form-group" th:classappend="${#fields.hasErrors('profilePicture')} ? 'has-error'">
                 <label class="col-lg-2 control-label" for="profilePic">Image</label>
                 <div class="col-lg-4">
                   <img id="profilePic" th:src="@{'/uploads/' + *{profilePicture}}" width="100"/>

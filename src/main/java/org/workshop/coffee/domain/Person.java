@@ -168,7 +168,7 @@ public class Person {
                 ", enable=" + enable +
                 ", address='" + address + '\'' +
                 ", roles=" + roles +
-                ", profilePic='" + profilePic + '\'' +
+                ", profilePicture='" + profilePic + '\'' +
                 '}';
     }
 }
