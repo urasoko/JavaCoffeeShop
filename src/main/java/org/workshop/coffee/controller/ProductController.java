@@ -1,6 +1,5 @@
 package org.workshop.coffee.controller;
 
-import org.springframework.web.util.HtmlUtils;
 import org.workshop.coffee.domain.Product;
 import org.workshop.coffee.domain.ProductType;
 import org.workshop.coffee.service.ProductService;
