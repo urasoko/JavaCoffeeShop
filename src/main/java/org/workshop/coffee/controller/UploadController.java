@@ -31,26 +31,7 @@ public class UploadController {
 
     @PostMapping("/uploadimage")
     public String uploadImage(Model model, @RequestParam("image") MultipartFile file, Principal principal) throws IOException {
-        //get fileName from file
-        var fileName = file.getOriginalFilename();
-        //save file to uploads folder
-        var filePath = Paths.get(UPLOAD_DIRECTORY, fileName);
 
-        //check if a path traversal exploit exists using normalize and send "msg"
-        if (!filePath.normalize().startsWith(Paths.get(UPLOAD_DIRECTORY).normalize())) {
-            model.addAttribute("msg", "Path traversal exploit detected");
-            return "person/upload";
-        }
-
-        Files.write(filePath, file.getBytes());
-        //get person
-        var person = getPerson(model, principal);
-        person.setProfilePicture(fileName);
-        //save person
-        personService.savePerson(person);
-        //send "msg" to user
-        model.addAttribute("msg", "Image uploaded successfully");
-        model.addAttribute("person", person);
         return "person/upload";
     }
 
