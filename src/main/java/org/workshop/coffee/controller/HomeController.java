@@ -41,8 +41,17 @@ public class HomeController {
         return "index";
     }
     public List<Product> searchProduct (String input) {
-       return null;
+
+        return null;
     }
+
+}
+
+
+
+
+
+
 
 
 
@@ -60,6 +69,3 @@ public class HomeController {
 //        return em.createNativeQuery(sql, Product.class).getResultList();
 //
 //    }
-
-
-}
