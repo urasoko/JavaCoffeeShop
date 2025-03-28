@@ -1,2 +1,2 @@
-# Hint 4
-Start a new update query in between `%';` and the `--`
+# ヒント 4
+`%';` と `--` の間に新しい更新クエリを開始してください。

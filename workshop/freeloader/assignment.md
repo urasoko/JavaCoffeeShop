@@ -1,20 +1,19 @@
-# Assignment - FREELOADER
+# 課題 - FREELOADER
 
-## Part 1
-Even without logging in, you can browse the menu and search for specific items
-Set all prices of all product to 0.00 so everything is for FREE
+## パート 1
+ログインしなくても、メニューを閲覧して特定のアイテムを検索できます。
+すべての商品の価格を 0.00 に設定し、すべてを無料にしてください。
 
-- [Hint 1](hint1.md)
-- [Hint 2](hint2.md)
-- [Hint 3](hint3.md)
-- [Hint 4](hint4.md)
-- [Hint 5](hint5.md)
+- [ヒント 1](hint1.md)
+- [ヒント 2](hint2.md)
+- [ヒント 3](hint3.md)
+- [ヒント 4](hint4.md)
+- [ヒント 5](hint5.md)
 
+## パート 2
+適切な方法で問題を修正してください。
 
-## Part 2
-Fix the issue the appropriate way
+- [ヒント 6](hint6.md)
+- [解決策](solution.md)
 
-- [Hint 6](hint6.md)
-- [Solution](solution.md)
-
-[WORKSHOP OVERVIEW](../WORKSHOP.md)
+[ワークショップ概要](../WORKSHOP.md)

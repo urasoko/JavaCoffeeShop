@@ -1,3 +1,3 @@
-# Hint 1
+# ヒント 1
 
-This search term is vulnerable to SQL injection. Try to shortcut the query.
+この検索ワードは SQL インジェクションに対して脆弱です。クエリをショートカットしてみてください。

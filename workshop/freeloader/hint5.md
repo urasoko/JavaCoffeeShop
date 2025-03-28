@@ -1,6 +1,6 @@
-# Hint 5
+# ヒント 5
 
-Try this 
+これを試してみてください
 ```sql
 %'; update product set price = 0 --
 ```

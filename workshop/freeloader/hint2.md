@@ -1,5 +1,5 @@
-# Hint 2
+# ヒント 2
 
-Note that you can end a query with `;` and use a comments `--` to ignore the remainder
+クエリを `;` で終了させ、コメント `--` を使用して残りの部分を無視することができることに注意してください。
 
-Have you tried any of the [Snyk tools](../tools/snyktools.md) to locate the problem?
+[こちらのSnykツール](../tools/snyktools.md)を使用して、問題を特定してみましたか？

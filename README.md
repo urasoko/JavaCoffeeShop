@@ -1,13 +1,13 @@
-# Java Coffee Shop
+# Java コーヒーショップ
 
-This application is an intentional vulnerable Java Spring-Boot application with Thymeleaf.
-It is use for training purposes only!
+このアプリケーションは、Thymeleaf を使用した意図的に脆弱な Java Spring-Boot アプリケーションです。
+これはトレーニング目的のみで使用されます！
 
-The code is and layout of the application is based on https://github.com/hieutdo/waa-coffee-shop
-However it is heavily edited, updated and includes security problems by design!
+コードとアプリケーションのレイアウトは、https://github.com/hieutdo/waa-coffee-shop に基づいています。
+ただし、大幅に編集され、更新され、設計上のセキュリティ問題を含んでいます！
 
-Please do not use this application and workshop in any other way than intended or without consent of [Brian Vermeer](https://brianvermeer.nl).
+このアプリケーションとワークショップは、[Brian Vermeer](https://brianvermeer.nl) の同意なしに、意図された目的以外で使用しないでください。
 
 ---
 
-Latest version of the [Workshop](/workshop/WORKSHOP.md)
+最新バージョンの [ワークショップ](/workshop/WORKSHOP.md)

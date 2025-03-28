@@ -1,8 +1,8 @@
-# Solution Fix for FREELOADER Assignment
+# FREELOADER 課題の解決策
 
-There is a SQL injection in the `SearchRepository`.
-You can fix it by implementing een parameterized queries. The Hibernate implementations uses a prepared statement under the hood to prevent injection.
-A possible solution is:
+`SearchRepository` に SQL インジェクションがあります。
+これを修正するには、パラメータ化されたクエリを実装することです。Hibernate の実装は、インジェクションを防ぐために内部で準備されたステートメントを使用します。
+可能な解決策は以下の通りです：
 
 ```java
     public List<Product> searchProduct (String input) {

@@ -1,3 +1,3 @@
-# Hint 6
+# ヒント 6
 
-Split the parameters from the actual query
+実際のクエリからパラメータを分割してください。
