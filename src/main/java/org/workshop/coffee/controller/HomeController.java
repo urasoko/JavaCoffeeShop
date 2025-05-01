@@ -23,7 +23,6 @@ public class HomeController {
     DataSource dataSource;
     
     private ProductService productService;
-
     @Autowired
     public HomeController(ProductService productService, SearchRepository searchRepository) {
         this.productService = productService;
