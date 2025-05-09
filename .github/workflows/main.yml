@@ -2,6 +2,7 @@ name: Example workflow for Maven using Snyk.
 on: push
 jobs:
   security:
+    if: github.ref != 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
