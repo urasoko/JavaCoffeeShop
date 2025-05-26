@@ -1,6 +1,7 @@
 package nl.brianvermeer.workshop.coffee.controller;
 
 import nl.brianvermeer.workshop.coffee.service.PersonService;
+import nl.brianvermeer.workshop.coffee.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,21 +28,7 @@ public class UploadController {
     }
 
     @PostMapping("/uploadimage") public String uploadImage(Model model, @RequestParam("image") MultipartFile file, Principal principal) throws IOException {
-        var name = file.getOriginalFilename().replace(" ", "_");
-        var fileNameAndPath = Paths.get(UPLOAD_DIRECTORY, name);
-        Files.write(fileNameAndPath, file.getBytes());
-        model.addAttribute("msg", "Uploaded images: " + name);
-
-        if (principal == null) {
-            model.addAttribute("message", "ERROR");
-            return "person/upload";
-        }
-
-        var user = principal.getName();
-        var person = personService.findByUsername(user);
-
-        person.setProfilePic(name);
-        personService.savePerson(person);
+        // TODO: 画像をアップロードする
         return "person/upload";
     }
 }
