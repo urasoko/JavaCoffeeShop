@@ -21,6 +21,8 @@ public class HomeController {
     EntityManager em;
     @Autowired
     private  ProductService productService;
+    @Autowired
+    private SearchRepository searchRepository;
 
 
     @GetMapping({"/", "/index", "/home"})
