@@ -1,10 +1,8 @@
 package nl.brianvermeer.workshop.coffee.controller;
 
-import java.util.List;
-import java.util.Locale;
-
-import javax.persistence.EntityManager;
-
+import nl.brianvermeer.workshop.coffee.repository.SearchRepository;
+import nl.brianvermeer.workshop.coffee.service.ProductService;
+import nl.brianvermeer.workshop.coffee.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,9 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import nl.brianvermeer.workshop.coffee.domain.Product;
-import nl.brianvermeer.workshop.coffee.repository.SearchRepository;
-import nl.brianvermeer.workshop.coffee.service.ProductService;
+import javax.persistence.EntityManager;
+import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class HomeController {
@@ -42,13 +40,13 @@ public class HomeController {
     private List<Product> searchProduct (String input) {
         // TODO: 商品名や説明に基づいて商品を検索する
         // 入力を小文字に変換
-        String searchInput = input.toLowerCase(Locale.ROOT);
-        // SQL文を作成
-        String query = "Select * from Product where description like '%" + input + "%' OR product_name like '%" + input + "%'";
-        // クエリを実行して結果を取得
-        List<Product> products = em.createNativeQuery(query, Product.class).getResultList();
+        String lowerCaseInput = input.toLowerCase(Locale.ROOT);
+        // SQLを作成
+        String query = "SELECT * FROM Product WHERE LOWER(description) LIKE '%" + lowerCaseInput + "%' OR LOWER(product_name) LIKE '%" + lowerCaseInput + "%'";
+        // クエリを実行
+        List<Product> resultList = em.createNativeQuery(query, Product.class).getResultList();
         // 結果を返す
-        return products;
+        return resultList;
     }
 
 }
