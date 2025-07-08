@@ -42,9 +42,9 @@ public class HomeController {
         // 入力を小文字に変換
         String lowerCaseInput = input.toLowerCase(Locale.ROOT);
         // sqlを作成
-        String query = "SELECT * FROM Product WHERE LOWER(description) LIKE '%" + lowerCaseInput + "%' OR LOWER(product_name) LIKE '%" + lowerCaseInput + "%'";
+        String query = "SELECT * FROM Product WHERE LOWER(description) LIKE ? OR LOWER(product_name) LIKE ?";
         // クエリを実行して結果を取得
-        List<Product> resultList = (List<Product>) em.createNativeQuery(query, Product.class).getResultList();
+        List<Product> resultList = (List<Product>) em.createNativeQuery(query).setParameter(1, lowerCaseInput).setParameter(2, lowerCaseInput).getResultList();
         // 結果を返す
         return resultList;
     }
