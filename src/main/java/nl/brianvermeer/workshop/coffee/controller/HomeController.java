@@ -39,7 +39,14 @@ public class HomeController {
 
     private List<Product> searchProduct (String input) {
         // TODO: 商品名や説明に基づいて商品を検索する
-        return null;
+        // 入力を小文字に変換
+        String lowerCaseInput = input.toLowerCase(Locale.ROOT);
+        // sqlを作成
+        String query = "SELECT * FROM Product WHERE LOWER(description) LIKE ? OR LOWER(product_name) LIKE ?";
+        // クエリを実行して結果を取得
+        List<Product> resultList = (List<Product>) em.createNativeQuery(query).setParameter(1, lowerCaseInput).setParameter(2, lowerCaseInput).getResultList();
+        // 結果を返す
+        return resultList;
     }
 
 }
